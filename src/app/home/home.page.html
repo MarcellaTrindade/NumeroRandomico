@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Número Randômico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding fixed>
+
+
+  <ion-item><h5>Escolha um número de 1 a 10</h5></ion-item>
+ 
+  <ion-item col-12>
+    <ion-label fixed>Inicial</ion-label>
+    <ion-input type="number" [(ngModel)]="num" min="1" max="10"></ion-input>
+  </ion-item>
+
+   <ion-button full color="dark" (click)="random()"> Sortear</ion-button>
+   <ion-button full color="dark" (click)="limpar()"> Limpar</ion-button>
+
+
+  <h1>{{ sorteado }}</h1>
+  <h1>{{ pontos }}</h1>
+</ion-content>
+
+
